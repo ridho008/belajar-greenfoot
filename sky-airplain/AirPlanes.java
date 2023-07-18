@@ -26,24 +26,28 @@ public class AirPlanes extends Actor
        if(bo!=null) {
            getWorld().removeObject(bo);
            Play.health.add(-1);
+           Greenfoot.playSound("boom6.wav");
        }
        
        BomTwo bt = (BomTwo)getOneIntersectingObject(BomTwo.class);
        if(bt!=null) {
            getWorld().removeObject(bt);
            Play.health.add(-1);
+           Greenfoot.playSound("boom1.wav");
        }
        
        BomThree bte = (BomThree)getOneIntersectingObject(BomThree.class);
        if(bte!=null) {
            getWorld().removeObject(bte);
            Play.health.add(-1);
+           Greenfoot.playSound("boom9.wav");
        }
        
        SkyBox sb = (SkyBox)getOneIntersectingObject(SkyBox.class);
        if(sb!=null) {
            getWorld().removeObject(sb);
            Play.score.add(10);
+           Greenfoot.playSound("airdrop.mp3");
        }
     }
 }

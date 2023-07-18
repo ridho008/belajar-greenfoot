@@ -17,6 +17,7 @@ public class NoButton extends Actor
         if(Greenfoot.mousePressed(this)) {
             Greenfoot.delay(5);
             Greenfoot.setWorld(new Start());
+
         }
     }
 }

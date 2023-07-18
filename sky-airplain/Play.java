@@ -16,6 +16,8 @@ public class Play extends World
     private GreenfootImage bgImage = new GreenfootImage(getBackground());
     private int scrollPosition = 0;
     private final int pictureWidth;
+    
+    
     /*private int count;
     private GreenfootImage B1;
     private GreenfootImage B2;
@@ -33,6 +35,8 @@ public class Play extends World
         
         bgImage.scale(pictureWidth, 500);
         getBackground().drawImage(bgImage,0,0);
+        
+        
         //B1 = new GreenfootImage("sky-bg.png");
         //B2 = new GreenfootImage("bg-new.jpg");
         prepare();
@@ -90,6 +94,8 @@ public class Play extends World
         if(Play.health.getValue() == 0) {
             Greenfoot.setWorld(new GameOver());
         }
+        
+        
     }
     
     private void scrollBackground(int dx) {

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Start extends World
 {
-
+    GreenfootSound music = new GreenfootSound("opening.mp3");
     /**
      * Constructor for objects of class Start.
      * 
@@ -27,5 +27,21 @@ public class Start extends World
     {
         PlayButton playButton = new PlayButton();
         addObject(playButton,150,250);
+    }
+    
+    public void act()
+    {
+       if(Greenfoot.mouseClicked(this))
+        {
+            //stop the music
+            music.stop();
+        }
+        //check if the music isn't being played
+        else if(!music.isPlaying())
+        {
+            //play the music
+            music.play();
+        }
+        
     }
 }
